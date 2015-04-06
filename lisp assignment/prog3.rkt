@@ -1,0 +1,10 @@
+#lang racket
+(define (hcf x y)
+  (cond ((= x 0) y)
+        ((= y 0) x)
+        ((> x y) (hcf (- x y) y))
+        ((< x y) (hcf (- y x) x))
+        ((= x y) (hcf (- x y) y))
+        )
+)
+(hcf 32 8)
